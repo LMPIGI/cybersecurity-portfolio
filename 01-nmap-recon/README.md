@@ -52,7 +52,22 @@ After re-running the scan, Windows Security logs recorded every connection attem
 ![Event 5156](./Screenshot%202026-05-02%20095722.png)
 ---
 
-## Conclusion
+### Packet capture analysis — Wireshark
+
+Captured live network traffic on the victim machine during the Nmap scan using Wireshark.
+
+**Filter used:** `ip.src == 192.168.44.129 && tcp`
+
+**Findings:**
+
+| Packet type | Meaning |
+|-------------|---------|
+| SYN (grey) | Nmap probing each port — "is anyone listening?" |
+| RST (red) | Windows rejecting closed ports — "nothing here" |
+
+Ports 135, 139 and 445 did not respond with RST — confirming they are open and actively listening. This is exactly how Nmap determines a port is open without completing a full TCP handshake.
+
+**Key forensic takeaway:** A SYN scan is stealthy because it never completes the handshake, but it is still fully visible in a packet capture. An investigator with a PCAP file can reconstruct the entire port scan and identify every port the attacker probed.## Conclusion
 A single Nmap scan from an attacker machine generated over 2,000 Event ID 5156 entries in the Windows Security log. Each entry recorded the attacker's IP address, the targeted port, and an exact timestamp — sufficient evidence to identify the source and timing of a reconnaissance attack.
 
 **Key forensic takeaway:** Port 445 (SMB) being open and logged as a target would be an immediate red flag in a real investigation, as it is the entry point for exploits like EternalBlue and WannaCry ransomware.
