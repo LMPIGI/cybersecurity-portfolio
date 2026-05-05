@@ -45,10 +45,10 @@ After re-running the scan, Windows Security logs recorded every connection attem
 
 ### Screenshots
 
-**Nmap scan results — open ports discovered:**  
+**Nmap scan results open ports discovered:**  
 ![Nmap scan](./Screenshot%202026-05-02%20095031.png)
 
-**Event ID 5156 — forensic evidence of the scan:**  
+**Event ID 5156  forensic evidence of the scan:**  
 ![Event 5156](./Screenshot%202026-05-02%20095722.png)
 ---
 
