@@ -15,7 +15,7 @@ This portfolio documents hands-on cybersecurity and digital forensics projects b
 | # | Project | Skills |
 |---|---------|--------|
 | 01 | [Nmap Reconnaissance & Forensic Artefact Analysis](./01-nmap-recon/README.md) | Nmap, Windows Event Logs, Network Forensics |
-
+| 02 | [Meterpreter Backdoor & Intrusion Analysis](./02-meterpreter-backdoor/README.md) | msfvenom, Metasploit, Meterpreter, netstat, Incident Response |
 ---
 
 ## Lab Environment
