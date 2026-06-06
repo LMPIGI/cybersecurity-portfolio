@@ -16,6 +16,7 @@ This portfolio documents hands-on cybersecurity and digital forensics projects b
 |---|---------|--------|
 | 01 | [Nmap Reconnaissance & Forensic Artefact Analysis](./01-nmap-recon/README.md) | Nmap, Windows Event Logs, Network Forensics |
 | 02 | [Meterpreter Backdoor & Intrusion Analysis](./02-meterpreter-backdoor/README.md) | msfvenom, Metasploit, Meterpreter, netstat, Incident Response |
+| 03 | [Meterpreter C2 Traffic Analysis](./03-c2-traffic-analysis/README.md) | Wireshark, Packet Analysis, C2 Detection, Network Forensics |
 ---
 
 ## Lab Environment
